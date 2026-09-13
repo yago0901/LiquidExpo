@@ -53,7 +53,10 @@ export function useSectionHeaderVariant<T extends HTMLElement>(variant: HeaderVa
       { rootMargin: "-65px 0px -80% 0px", threshold: 0 },
     );
     observer.observe(el);
-    return () => observer.disconnect();
+    return () => {
+      observer.disconnect();
+      setVariant("solid");
+    };
   }, [variant, setVariant]);
 
   return ref;
