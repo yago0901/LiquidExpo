@@ -31,7 +31,7 @@ export function LocaleSwitcher() {
           className={cn(
             "rounded-full px-3 py-1 text-xs font-semibold tracking-wide uppercase transition-colors",
             locale === loc
-              ? "bg-gradient-to-r from-violet to-cyan text-void"
+              ? "bg-ink text-void"
               : "text-mist hover:text-ink",
           )}
         >

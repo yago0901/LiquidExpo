@@ -1,18 +1,12 @@
 import { cn } from "@/lib/utils";
 
 type EyebrowProps = React.HTMLAttributes<HTMLParagraphElement> & {
-  tone?: "violet" | "gold" | "cyan";
-};
-
-const toneDot: Record<NonNullable<EyebrowProps["tone"]>, string> = {
-  violet: "bg-violet",
-  gold: "bg-gold",
-  cyan: "bg-cyan",
+  tone?: "default" | "accent";
 };
 
 export function Eyebrow({
   className,
-  tone = "violet",
+  tone = "default",
   children,
   ...props
 }: EyebrowProps) {
@@ -25,7 +19,10 @@ export function Eyebrow({
       {...props}
     >
       <span
-        className={cn("h-1.5 w-1.5 rounded-full", toneDot[tone])}
+        className={cn(
+          "h-1.5 w-1.5 rounded-full",
+          tone === "accent" ? "bg-accent" : "bg-mist",
+        )}
         aria-hidden="true"
       />
       {children}

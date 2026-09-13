@@ -9,13 +9,22 @@
     "languageLabel": "Idioma",
     "switchToEnglish": "Switch to English",
     "switchToPortuguese": "Mudar para português",
+    "home": "Início",
+    "about": "Sobre",
+    "works": "Trabalhos",
+    "contact": "Contato",
     "links": {
       "mission": "Missão",
+      "branding": "Marca",
       "manifesto": "Manifesto",
-      "team": "Constelação",
+      "founder": "Fundadora",
+      "constellation": "Constelação",
+      "board": "Conselho",
+      "interview": "Entrevista",
       "exhibitions": "Exposições",
       "articles": "Artigos",
-      "partner": "Parceria"
+      "teasers": "Teasers",
+      "videoClips": "Videoclipes"
     }
   },
   "common": {
@@ -25,6 +34,10 @@
     "subscribe": "Inscrever-se na The Mindset",
     "startConversation": "Iniciar uma Conversa",
     "join": "Junte-se ao #LiquidExpo"
+  },
+  "home": {
+    "previous": "Vídeo anterior",
+    "next": "Próximo vídeo"
   },
   "hero": {
     "eyebrow": "Exposições de arte para uma cultura fluida",

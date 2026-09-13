@@ -7,7 +7,7 @@ type SectionHeadingProps = {
   subhead?: React.ReactNode;
   align?: "left" | "center";
   size?: "default" | "large";
-  tone?: "violet" | "gold" | "cyan";
+  tone?: "default" | "accent";
   className?: string;
   titleId?: string;
 };
@@ -18,7 +18,7 @@ export function SectionHeading({
   subhead,
   align = "left",
   size = "default",
-  tone = "violet",
+  tone = "default",
   className,
   titleId,
 }: SectionHeadingProps) {
@@ -34,8 +34,8 @@ export function SectionHeading({
       <h2
         id={titleId}
         className={cn(
-          "font-display leading-[1.05] font-medium text-balance text-ink",
-          size === "large" ? "text-4xl sm:text-6xl lg:text-7xl" : "text-3xl sm:text-4xl lg:text-5xl",
+          "font-display text-balance leading-[0.95] font-extrabold tracking-tight text-ink uppercase",
+          size === "large" ? "text-5xl sm:text-7xl lg:text-8xl" : "text-4xl sm:text-5xl lg:text-6xl",
         )}
       >
         {title}

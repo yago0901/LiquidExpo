@@ -9,13 +9,22 @@
     "languageLabel": "Language",
     "switchToEnglish": "Switch to English",
     "switchToPortuguese": "Mudar para português",
+    "home": "Home",
+    "about": "About",
+    "works": "Works",
+    "contact": "Contact",
     "links": {
       "mission": "Mission",
+      "branding": "Branding",
       "manifesto": "Manifesto",
-      "team": "Constellation",
+      "founder": "Founder",
+      "constellation": "Constellation",
+      "board": "Board",
+      "interview": "Interview",
       "exhibitions": "Exhibitions",
       "articles": "Articles",
-      "partner": "Partner"
+      "teasers": "Teasers",
+      "videoClips": "Video Clips"
     }
   },
   "common": {
@@ -25,6 +34,10 @@
     "subscribe": "Subscribe to The Mindset",
     "startConversation": "Start a Conversation",
     "join": "Join #LiquidExpo"
+  },
+  "home": {
+    "previous": "Previous video",
+    "next": "Next video"
   },
   "hero": {
     "eyebrow": "Art exhibitions for a fluid culture",

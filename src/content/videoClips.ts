@@ -1,9 +1,29 @@
 import type { VideoClip } from "./types";
 
 export const videoClips: VideoClip[] = [
-  { id: "eletroamazon", slug: "eletroamazon", title: "Eletroamazon", artist: "Pedro Igel" },
-  { id: "break-the-matrix", slug: "break-the-matrix", title: "Break The Matrix", artist: "Marian Flow" },
-  { id: "oxigene", slug: "oxigene", title: "Oxigene", artist: "Pedro Igel" },
   { id: "espiral", slug: "espiral", title: "Espiral", artist: "Fluyd, Avelar ft. Claudiney Prieto" },
-  { id: "the-lingua", slug: "the-lingua", title: "The Lingua", artist: "Ale Rauen" },
+  {
+    id: "klaus-mitteldorf-teaser",
+    slug: "klaus-mitteldorf-teaser",
+    title: "First Teaser — Klaus Mitteldorf",
+    artist: "#LiquidExpo",
+  },
+  {
+    id: "dubai-presentation",
+    slug: "dubai-presentation",
+    title: "Liquid Art Festival — Dubai Presentation",
+    artist: "#LiquidExpo",
+  },
+  {
+    id: "future-of-sound-conceptual",
+    slug: "future-of-sound-conceptual",
+    title: "The Future of Sound is Conceptual",
+    artist: "#LiquidExpo",
+  },
+  {
+    id: "liquid-art-reference-reel",
+    slug: "liquid-art-reference-reel",
+    title: "Liquid Art — Reference Reel",
+    artist: "#LiquidExpo",
+  },
 ];

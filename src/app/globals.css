@@ -1,39 +1,23 @@
 @import "tailwindcss";
 
 @theme {
-  --color-void: #05040a;
-  --color-abyss: #0d0b18;
-  --color-surface: #14111f;
-  --color-line: #2a2438;
+  --color-void: #050505;
+  --color-surface: #111111;
+  --color-line: #262626;
 
-  --color-ink: #f4f2f8;
-  --color-mist: #ada6bf;
-  --color-mist-dim: #756f8a;
+  --color-ink: #f5f5f0;
+  --color-mist: #9a9a95;
+  --color-mist-dim: #5a5a55;
 
-  --color-violet: #8b5cf6;
-  --color-violet-deep: #4c1d95;
-  --color-indigo: #4338ca;
-  --color-cyan: #38bdf8;
-  --color-gold: #f5b942;
-  --color-rose: #f472b6;
+  --color-paper: #e9e7e1;
+  --color-paper-ink: #111111;
+
+  --color-accent: #ff3b1f;
 
   --font-display: var(--font-unbounded);
   --font-body: var(--font-manrope);
 
-  --animate-flow: flow 18s linear infinite;
   --animate-pulse-slow: pulse-slow 4s ease-in-out infinite;
-}
-
-@keyframes flow {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
 }
 
 @keyframes pulse-slow {
@@ -46,8 +30,33 @@
   }
 }
 
+@keyframes grainShift {
+  0% {
+    transform: translate(0, 0);
+  }
+  33% {
+    transform: translate(-2%, 1%);
+  }
+  66% {
+    transform: translate(1%, -2%);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
 :root {
   color-scheme: dark;
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+  --color-void: var(--color-paper);
+  --color-surface: #ffffff;
+  --color-line: #d8d5cc;
+  --color-ink: var(--color-paper-ink);
+  --color-mist: #55524a;
+  --color-mist-dim: #8a877c;
 }
 
 html {
@@ -61,12 +70,12 @@ body {
 }
 
 ::selection {
-  background: var(--color-violet);
+  background: var(--color-ink);
   color: var(--color-void);
 }
 
 *:focus-visible {
-  outline: 2px solid var(--color-cyan);
+  outline: 2px solid var(--color-accent);
   outline-offset: 3px;
   border-radius: 2px;
 }
@@ -82,53 +91,46 @@ body {
   }
 }
 
-.gradient-liquid-hero {
-  background: radial-gradient(
-      120% 90% at 50% 0%,
-      color-mix(in oklab, var(--color-violet) 35%, transparent) 0%,
-      transparent 60%
-    ),
-    radial-gradient(
-      100% 80% at 85% 100%,
-      color-mix(in oklab, var(--color-cyan) 25%, transparent) 0%,
-      transparent 55%
-    ),
-    var(--color-void);
+/* Global film-grain texture, sits above everything, very subtle. */
+.film-grain {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  opacity: 0.06;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 180px 180px;
+  animation: grainShift 0.4s steps(3) infinite;
 }
 
-.gradient-liquid-warm {
-  background: radial-gradient(
-      100% 100% at 20% 20%,
-      color-mix(in oklab, var(--color-gold) 22%, transparent) 0%,
-      transparent 55%
-    ),
-    radial-gradient(
-      120% 100% at 100% 80%,
-      color-mix(in oklab, var(--color-violet-deep) 55%, transparent) 0%,
-      transparent 60%
-    ),
-    var(--color-void);
+.page-paper {
+  background: var(--color-paper);
+  color: var(--color-paper-ink);
 }
 
-.gradient-liquid-manifesto {
-  background: linear-gradient(
-    180deg,
-    var(--color-void) 0%,
-    #0a0714 40%,
-    #120a1f 100%
-  );
+/* Page-transition curtain: a fixed pill at the top that grows to cover the
+   viewport, swaps the route underneath, then shrinks back. */
+.page-curtain {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 0;
+  --curtain-radius: 32px;
+  border-radius: 0 0 var(--curtain-radius) var(--curtain-radius);
+  background: #050505;
+  z-index: 200;
+  overflow: hidden;
+  pointer-events: none;
 }
 
-.gradient-prism-text {
-  background: linear-gradient(
-    90deg,
-    var(--color-rose),
-    var(--color-gold),
-    var(--color-cyan),
-    var(--color-violet)
-  );
-  background-size: 300% 100%;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+.page-curtain-grain {
+  position: absolute;
+  inset: -60% -20%;
+  opacity: 0.5;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n2'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n2)'/%3E%3C/svg%3E");
+  background-size: 180px 180px;
+  animation: grainShift 0.3s steps(4) infinite;
 }
