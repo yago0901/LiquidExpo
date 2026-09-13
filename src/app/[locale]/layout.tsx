@@ -8,6 +8,7 @@ import { routing } from "@/i18n/routing";
 import { GoogleAnalytics } from "@/components/analytics/GoogleAnalytics";
 import { SkipLink } from "@/components/layout/SkipLink";
 import { Header } from "@/components/layout/Header";
+import { HeaderThemeProvider } from "@/components/layout/HeaderThemeContext";
 import { PageTransitionProvider } from "@/components/layout/PageTransitionProvider";
 import { JsonLd } from "@/components/seo/JsonLd";
 import "../globals.css";
@@ -85,13 +86,15 @@ export default async function LocaleLayout({
         <NextIntlClientProvider>
           <JsonLd />
           <div className="film-grain" />
-          <PageTransitionProvider>
-            <SkipLink />
-            <Header />
-            <main id="main-content" className="min-h-0 flex-1 overflow-y-auto">
-              {children}
-            </main>
-          </PageTransitionProvider>
+          <HeaderThemeProvider>
+            <PageTransitionProvider>
+              <SkipLink />
+              <Header />
+              <main id="main-content" className="min-h-0 flex-1 overflow-y-auto pt-16">
+                {children}
+              </main>
+            </PageTransitionProvider>
+          </HeaderThemeProvider>
         </NextIntlClientProvider>
         <Analytics />
         <GoogleAnalytics />

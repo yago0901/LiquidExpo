@@ -16,8 +16,18 @@ export type BoardMember = {
   id: string;
   name: string;
   flag: string;
+  photo: string;
+  linkedin: string;
   roleTitle: LocalizedText;
   roleDescription: LocalizedText;
+};
+
+export type Leader = {
+  id: string;
+  name: string;
+  photo: string;
+  roleTitle: LocalizedText;
+  bio: LocalizedText;
 };
 
 export type Article = {

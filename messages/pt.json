@@ -33,7 +33,8 @@
     "knowMore": "Saiba Mais",
     "subscribe": "Inscrever-se na The Mindset",
     "startConversation": "Iniciar uma Conversa",
-    "join": "Junte-se ao #LiquidExpo"
+    "join": "Junte-se ao #LiquidExpo",
+    "close": "Fechar"
   },
   "home": {
     "previous": "Vídeo anterior",
@@ -47,12 +48,21 @@
   },
   "mission": {
     "eyebrow": "Nossa missão",
+    "sectionNumber": "01",
+    "sectionLabel": "Missão",
     "title": "Sentimentos Universais, Novas Estéticas",
+    "titleLines": ["Sentimentos", "Universais,", "Novas Estéticas"],
     "body1": "Estudamos imagens, gestos e paisagens sonoras imersivas para revelar os sentimentos que definem nosso tempo — e os transformamos em ambientes pelos quais as pessoas podem transitar. Liquid Art não é um estilo fixo. É uma forma de ler a cultura em movimento: moda, som, tecnologia e identidade se dissolvendo em uma única experiência contínua.",
-    "body2": "Acreditamos que o significado sobrevive à tendência. Cada exposição, filme e faixa que lançamos é um estudo sobre o que uma geração sente antes mesmo de ter as palavras para isso."
+    "body2": "Acreditamos que o significado sobrevive à tendência. Cada exposição, filme e faixa que lançamos é um estudo sobre o que uma geração sente antes mesmo de ter as palavras para isso.",
+    "leadersPrefix": "Uma dupla à frente da #LiquidExpo — ",
+    "leadersMiddle": " e ",
+    "leadersSuffix": " lideram a visão de transformar a Liquid Art na referência em experiências que fazem o público sentir a cultura, não só assistir."
   },
   "brandStory": {
     "eyebrow": "Nossa marca",
+    "sectionNumber": "02",
+    "sectionLabel": "Marca",
+    "statementLines": ["Nada na cultura", "de hoje", "permanece parado"],
     "title": "Por Que a Hashtag? Nossa Marca.",
     "body1": "Nada na cultura de hoje permanece parado. Gêneros se misturam, identidades mudam, e o público transita entre o físico e o digital sem perceber a costura. Chamamos isso de Liquid porque essa é a única palavra honesta o suficiente para descrever isso.",
     "body2": "#LiquidExpo é nossa assinatura e nossa tese em uma única hashtag — um arquivo crescente de exposições, artistas e ideias que se recusam a caber em uma única categoria. Talvez a cultura sempre tenha sido um fluxo. O que estamos construindo é o vocabulário para isso."
@@ -82,6 +92,9 @@
   },
   "board": {
     "eyebrow": "Liderança",
+    "sectionNumber": "03",
+    "sectionLabel": "Conselho",
+    "titleLines": ["Membros do", "Conselho"],
     "title": "Membros do Conselho",
     "intro": "O time que constrói a infraestrutura por trás do movimento."
   },

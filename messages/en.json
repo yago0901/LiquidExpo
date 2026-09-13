@@ -33,7 +33,8 @@
     "knowMore": "Know More",
     "subscribe": "Subscribe to The Mindset",
     "startConversation": "Start a Conversation",
-    "join": "Join #LiquidExpo"
+    "join": "Join #LiquidExpo",
+    "close": "Close"
   },
   "home": {
     "previous": "Previous video",
@@ -47,12 +48,21 @@
   },
   "mission": {
     "eyebrow": "Our mission",
+    "sectionNumber": "01",
+    "sectionLabel": "Mission",
     "title": "Universal Feelings, New Aesthetics",
+    "titleLines": ["Universal", "Feelings,", "New Aesthetics"],
     "body1": "We study images, gestures, and immersive soundscapes to uncover the feelings that define our time — and we turn them into environments people can step inside. Liquid Art isn't a fixed style. It's a way of reading culture as it moves: fashion, sound, technology, and identity, dissolving into one continuous experience.",
-    "body2": "We believe meaning outlasts trend. Every exhibition, film, and track we release is a study of what a generation feels before it has the words for it."
+    "body2": "We believe meaning outlasts trend. Every exhibition, film, and track we release is a study of what a generation feels before it has the words for it.",
+    "leadersPrefix": "A duo behind #LiquidExpo — ",
+    "leadersMiddle": " and ",
+    "leadersSuffix": " lead the vision of turning Liquid Art into the reference for experiences that make audiences feel culture, not just watch it."
   },
   "brandStory": {
     "eyebrow": "Our branding",
+    "sectionNumber": "02",
+    "sectionLabel": "Brand",
+    "statementLines": ["Nothing about", "culture today", "holds still"],
     "title": "Why the Hashtag? Our Branding.",
     "body1": "Nothing about culture today holds still. Genres blend, identities shift, and audiences move between the physical and the digital without noticing the seam. We named it Liquid because that's the only word honest enough to describe it.",
     "body2": "#LiquidExpo is our signature and our thesis in one tag — a growing archive of exhibitions, artists, and ideas that refuse to sit inside a single category. Perhaps culture was always a flow. What we're building is the vocabulary for it."
@@ -82,6 +92,9 @@
   },
   "board": {
     "eyebrow": "Leadership",
+    "sectionNumber": "03",
+    "sectionLabel": "Board",
+    "titleLines": ["Board", "Members"],
     "title": "Board Members",
     "intro": "The team building the infrastructure behind the movement."
   },
