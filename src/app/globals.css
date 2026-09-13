@@ -1,0 +1,134 @@
+@import "tailwindcss";
+
+@theme {
+  --color-void: #05040a;
+  --color-abyss: #0d0b18;
+  --color-surface: #14111f;
+  --color-line: #2a2438;
+
+  --color-ink: #f4f2f8;
+  --color-mist: #ada6bf;
+  --color-mist-dim: #756f8a;
+
+  --color-violet: #8b5cf6;
+  --color-violet-deep: #4c1d95;
+  --color-indigo: #4338ca;
+  --color-cyan: #38bdf8;
+  --color-gold: #f5b942;
+  --color-rose: #f472b6;
+
+  --font-display: var(--font-unbounded);
+  --font-body: var(--font-manrope);
+
+  --animate-flow: flow 18s linear infinite;
+  --animate-pulse-slow: pulse-slow 4s ease-in-out infinite;
+}
+
+@keyframes flow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes pulse-slow {
+  0%,
+  100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: auto;
+}
+
+body {
+  background: var(--color-void);
+  color: var(--color-ink);
+  font-family: var(--font-body), Arial, Helvetica, sans-serif;
+}
+
+::selection {
+  background: var(--color-violet);
+  color: var(--color-void);
+}
+
+*:focus-visible {
+  outline: 2px solid var(--color-cyan);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.gradient-liquid-hero {
+  background: radial-gradient(
+      120% 90% at 50% 0%,
+      color-mix(in oklab, var(--color-violet) 35%, transparent) 0%,
+      transparent 60%
+    ),
+    radial-gradient(
+      100% 80% at 85% 100%,
+      color-mix(in oklab, var(--color-cyan) 25%, transparent) 0%,
+      transparent 55%
+    ),
+    var(--color-void);
+}
+
+.gradient-liquid-warm {
+  background: radial-gradient(
+      100% 100% at 20% 20%,
+      color-mix(in oklab, var(--color-gold) 22%, transparent) 0%,
+      transparent 55%
+    ),
+    radial-gradient(
+      120% 100% at 100% 80%,
+      color-mix(in oklab, var(--color-violet-deep) 55%, transparent) 0%,
+      transparent 60%
+    ),
+    var(--color-void);
+}
+
+.gradient-liquid-manifesto {
+  background: linear-gradient(
+    180deg,
+    var(--color-void) 0%,
+    #0a0714 40%,
+    #120a1f 100%
+  );
+}
+
+.gradient-prism-text {
+  background: linear-gradient(
+    90deg,
+    var(--color-rose),
+    var(--color-gold),
+    var(--color-cyan),
+    var(--color-violet)
+  );
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}

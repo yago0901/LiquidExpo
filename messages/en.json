@@ -1,0 +1,119 @@
+{
+  "meta": {
+    "title": "Liquid Art — #LiquidExpo",
+    "description": "We are Liquid Art — a digital channel and exhibition platform celebrating the fluidity of contemporary culture. #LiquidExpo turns emerging feelings into aesthetic experiences."
+  },
+  "nav": {
+    "skipToContent": "Skip to content",
+    "brand": "#LiquidExpo",
+    "languageLabel": "Language",
+    "switchToEnglish": "Switch to English",
+    "switchToPortuguese": "Mudar para português",
+    "links": {
+      "mission": "Mission",
+      "manifesto": "Manifesto",
+      "team": "Constellation",
+      "exhibitions": "Exhibitions",
+      "articles": "Articles",
+      "partner": "Partner"
+    }
+  },
+  "common": {
+    "watch": "Watch",
+    "watchManifesto": "Watch the Manifesto",
+    "knowMore": "Know More",
+    "subscribe": "Subscribe to The Mindset",
+    "startConversation": "Start a Conversation",
+    "join": "Join #LiquidExpo"
+  },
+  "hero": {
+    "eyebrow": "Art exhibitions for a fluid culture",
+    "headline": "For Artists, Creators & Dreamers",
+    "subhead": "We are Liquid Art — a digital channel and exhibition platform celebrating the fluidity of contemporary culture. #LiquidExpo turns emerging feelings into aesthetic experiences.",
+    "microline": "DM us to apply for a stage, an exhibition, or a collaboration."
+  },
+  "mission": {
+    "eyebrow": "Our mission",
+    "title": "Universal Feelings, New Aesthetics",
+    "body1": "We study images, gestures, and immersive soundscapes to uncover the feelings that define our time — and we turn them into environments people can step inside. Liquid Art isn't a fixed style. It's a way of reading culture as it moves: fashion, sound, technology, and identity, dissolving into one continuous experience.",
+    "body2": "We believe meaning outlasts trend. Every exhibition, film, and track we release is a study of what a generation feels before it has the words for it."
+  },
+  "brandStory": {
+    "eyebrow": "Our branding",
+    "title": "Why the Hashtag? Our Branding.",
+    "body1": "Nothing about culture today holds still. Genres blend, identities shift, and audiences move between the physical and the digital without noticing the seam. We named it Liquid because that's the only word honest enough to describe it.",
+    "body2": "#LiquidExpo is our signature and our thesis in one tag — a growing archive of exhibitions, artists, and ideas that refuse to sit inside a single category. Perhaps culture was always a flow. What we're building is the vocabulary for it."
+  },
+  "manifesto": {
+    "eyebrow": "The manifesto",
+    "title": "Meaning Over Money",
+    "line1": "To erase memory is to blind the mirrors in which humanity learns to recognize itself.",
+    "line2": "No mirrors. No reflection.",
+    "body1": "Digital museums are burning in silence — not from fire, but from neglect. Cultural intellectual property is disappearing faster than it's being protected, traded for attention instead of preserved for meaning.",
+    "body2": "Liquid Art exists to push back. We treat culture as heritage, not content. Every exhibition we stage is an act of digital memory-keeping, built for the artists and communities who created it — not the algorithms that profit from it.",
+    "closing": "Art changes people. People change the world."
+  },
+  "founder": {
+    "eyebrow": "Founder & vision holder",
+    "name": "Carolina Damasceno",
+    "flag": "🇧🇷",
+    "title": "Founder & Vision Holder",
+    "bioLong": "Carolina Damasceno is the founder and vision holder of #LiquidExpo, the creative force behind the Liquid Art movement. She leads a global constellation of artists, musicians, photographers, and technologists in building exhibitions that treat culture as a living, moving thing rather than a fixed product.",
+    "bioLong2": "Her work sits at the intersection of digital art, music, and fashion — curating experiences designed to make the invisible feelings of a generation visible, and unforgettable.",
+    "bioShort": "Carolina Damasceno — Founder of #LiquidExpo, curator of the Liquid Art movement."
+  },
+  "team": {
+    "eyebrow": "The collective",
+    "title": "The #LiquidExpo Constellation",
+    "intro": "A collective of artists, directors, DJs, photographers, and technologists shaping every #LiquidExpo release."
+  },
+  "board": {
+    "eyebrow": "Leadership",
+    "title": "Board Members",
+    "intro": "The team building the infrastructure behind the movement."
+  },
+  "interview": {
+    "eyebrow": "Carolina's Interview",
+    "title": "Audiovisual Podcast",
+    "intro": "An audiovisual conversation series featuring Carolina Damasceno and voices from the #LiquidExpo constellation."
+  },
+  "videoClips": {
+    "eyebrow": "On screen",
+    "title": "Video Clips",
+    "intro": "Original music videos and audiovisual releases from across the #LiquidExpo constellation."
+  },
+  "articles": {
+    "eyebrow": "Framework",
+    "title": "Liquid Art Framework — Articles & News",
+    "intro": "Essays, interviews, and dispatches from inside the movement."
+  },
+  "exhibitions": {
+    "eyebrow": "On stage",
+    "title": "Art Exhibitions",
+    "intro": "Physical and digital exhibitions staged around the world, each one built around a single concept."
+  },
+  "teasers": {
+    "eyebrow": "In the making",
+    "title": "#LiquidExpo Teasers",
+    "intro": "Behind the scenes of every exhibition, campaign, and collaboration."
+  },
+  "newsletter": {
+    "eyebrow": "The mindset",
+    "title": "A Dose of Imagination, Delivered",
+    "body": "Sign up for early access to exhibitions, exclusive tracks, and the ideas shaping the Liquid Art movement — before they go anywhere else.",
+    "placeholder": "Your email address",
+    "success": "You're in. Welcome to The Mindset.",
+    "disclaimer": "Newsletter signup is a front-end preview for now — no messages are sent yet."
+  },
+  "partner": {
+    "eyebrow": "Collaborate",
+    "title": "Partner With Us",
+    "body": "We collaborate with artists, brands, and cultural institutions who want to move at the speed of culture, not behind it. If you create, perform, curate, or build — there's a place for you in the constellation."
+  },
+  "footer": {
+    "tagline": "Art Changes People, People Change the World.",
+    "signoff": "#LiquidExpo — We Are Liquid Art.",
+    "contact": "DM for stage bookings, exhibitions, or partnerships.",
+    "rights": "All rights reserved."
+  }
+}
