@@ -1,8 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { cn } from "@/lib/utils";
 
-export function ThemeToggle() {
+export function ThemeToggle({ dark = false }: { dark?: boolean }) {
   const [theme, setTheme] = useState<"dark" | "light">("dark");
 
   useEffect(() => {
@@ -27,7 +28,10 @@ export function ThemeToggle() {
       type="button"
       onClick={toggle}
       aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
-      className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-line text-ink transition-colors hover:border-accent"
+      className={cn(
+        "flex h-7 w-7 shrink-0 items-center justify-center rounded-full border transition-colors hover:border-accent",
+        dark ? "border-black/30 text-black" : "border-line text-ink",
+      )}
     >
       {theme === "dark" ? (
         <svg viewBox="0 0 24 24" fill="currentColor" className="h-3.5 w-3.5" aria-hidden="true">

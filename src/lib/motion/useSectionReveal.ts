@@ -18,11 +18,13 @@ export type RevealVariant =
 type UseSectionRevealOptions = {
   variant: RevealVariant;
   start?: string;
+  immediate?: boolean;
 };
 
 export function useSectionReveal<T extends HTMLElement = HTMLElement>({
   variant,
   start = "top 75%",
+  immediate = false,
 }: UseSectionRevealOptions) {
   const containerRef = useRef<T | null>(null);
   const reduced = useReducedMotion();
@@ -41,6 +43,8 @@ export function useSectionReveal<T extends HTMLElement = HTMLElement>({
         return;
       }
 
+      const scrollTrigger = immediate ? undefined : { trigger: container, start, once: true };
+
       switch (variant) {
         case "fade-up-stagger":
         case "grid-stagger": {
@@ -50,7 +54,7 @@ export function useSectionReveal<T extends HTMLElement = HTMLElement>({
             duration: 0.8,
             ease: "power3.out",
             stagger: 0.12,
-            scrollTrigger: { trigger: container, start },
+            scrollTrigger,
           });
           break;
         }
@@ -58,10 +62,10 @@ export function useSectionReveal<T extends HTMLElement = HTMLElement>({
           gsap.from(container.querySelectorAll("[data-reveal-line]"), {
             opacity: 0,
             yPercent: 100,
-            duration: 0.9,
+            duration: 1.4,
             ease: "power4.out",
-            stagger: 0.15,
-            scrollTrigger: { trigger: container, start },
+            stagger: 0.24,
+            scrollTrigger,
           });
           break;
         }
@@ -85,7 +89,7 @@ export function useSectionReveal<T extends HTMLElement = HTMLElement>({
             duration: 0.8,
             ease: "power3.out",
             stagger: 0.1,
-            scrollTrigger: { trigger: container, start },
+            scrollTrigger,
           });
           break;
         }
@@ -95,13 +99,13 @@ export function useSectionReveal<T extends HTMLElement = HTMLElement>({
             opacity: 0,
             duration: 0.6,
             ease: "power2.out",
-            scrollTrigger: { trigger: container, start },
+            scrollTrigger,
           });
           break;
         }
       }
     },
-    { scope: containerRef, dependencies: [variant, reduced] },
+    { scope: containerRef, dependencies: [variant, reduced, immediate] },
   );
 
   return containerRef;

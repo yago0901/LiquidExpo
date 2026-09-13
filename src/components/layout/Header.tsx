@@ -6,18 +6,9 @@ import { useTranslations } from "next-intl";
 import { TransitionLink } from "./TransitionLink";
 import { LocaleSwitcher } from "./LocaleSwitcher";
 import { ThemeToggle } from "./ThemeToggle";
+import { useHeaderTheme } from "./HeaderThemeContext";
 import { Container } from "@/components/ui/Container";
 import { cn } from "@/lib/utils";
-
-const ABOUT_ITEMS = [
-  { key: "mission", href: "/about/mission" },
-  { key: "branding", href: "/about/brand" },
-  { key: "manifesto", href: "/about/manifesto" },
-  { key: "founder", href: "/about/founder" },
-  { key: "constellation", href: "/about/constellation" },
-  { key: "board", href: "/about/board" },
-  { key: "interview", href: "/about/interview" },
-] as const;
 
 const WORKS_ITEMS = [
   { key: "exhibitions", href: "/works/exhibitions" },
@@ -30,10 +21,12 @@ function NavDropdown({
   label,
   items,
   labels,
+  dark,
 }: {
   label: string;
   items: readonly { key: string; href: string }[];
   labels: (key: string) => string;
+  dark: boolean;
 }) {
   const [open, setOpen] = useState(false);
   const wrapperRef = useRef<HTMLDivElement>(null);
@@ -61,7 +54,10 @@ function NavDropdown({
         type="button"
         onClick={() => setOpen((v) => !v)}
         aria-expanded={open}
-        className="flex items-center gap-1 text-sm tracking-wide text-mist uppercase transition-colors hover:text-ink"
+        className={cn(
+          "flex items-center gap-1 text-sm tracking-wide uppercase transition-colors",
+          dark ? "text-black/60 hover:text-black" : "text-mist hover:text-ink",
+        )}
       >
         {label}
         <span aria-hidden="true" className={cn("transition-transform", open && "rotate-180")}>
@@ -90,13 +86,24 @@ function NavDropdown({
 export function Header() {
   const t = useTranslations("nav");
   const tl = useTranslations("nav.links");
+  const { variant } = useHeaderTheme();
+  const transparent = variant !== "solid";
+  const dark = variant === "onLight";
 
   return (
-    <header className="sticky top-0 z-[100] border-b border-line/60 bg-void">
+    <header
+      className={cn(
+        "fixed inset-x-0 top-0 z-[100] border-b transition-colors duration-300",
+        transparent ? "border-transparent bg-transparent" : "border-line/60 bg-void",
+      )}
+    >
       <Container className="flex h-16 items-center">
         <TransitionLink
           href="/"
-          className="flex items-center gap-2 font-display text-sm font-bold tracking-wide text-ink uppercase"
+          className={cn(
+            "flex items-center gap-2 font-display text-sm font-bold tracking-wide uppercase transition-colors duration-300",
+            dark ? "text-black" : "text-ink",
+          )}
         >
           <Image
             src="/images/logo-mark-icon.webp"
@@ -104,7 +111,7 @@ export function Header() {
             aria-hidden="true"
             width={184}
             height={118}
-            className="h-7 w-auto"
+            className="mix-blend-screen h-7 w-auto"
           />
           {t("brand")}
         </TransitionLink>
@@ -112,23 +119,37 @@ export function Header() {
         <nav aria-label={t("brand")} className="hidden items-center gap-8 md:flex md:ml-10">
           <TransitionLink
             href="/"
-            className="text-sm tracking-wide text-mist uppercase transition-colors hover:text-ink"
+            className={cn(
+              "text-sm tracking-wide uppercase transition-colors",
+              dark ? "text-black/60 hover:text-black" : "text-mist hover:text-ink",
+            )}
           >
             {t("home")}
           </TransitionLink>
-          <NavDropdown label={t("about")} items={ABOUT_ITEMS} labels={tl} />
-          <NavDropdown label={t("works")} items={WORKS_ITEMS} labels={tl} />
+          <TransitionLink
+            href="/about"
+            className={cn(
+              "text-sm tracking-wide uppercase transition-colors",
+              dark ? "text-black/60 hover:text-black" : "text-mist hover:text-ink",
+            )}
+          >
+            {t("about")}
+          </TransitionLink>
+          <NavDropdown label={t("works")} items={WORKS_ITEMS} labels={tl} dark={dark} />
           <TransitionLink
             href="/contact"
-            className="text-sm tracking-wide text-mist uppercase transition-colors hover:text-ink"
+            className={cn(
+              "text-sm tracking-wide uppercase transition-colors",
+              dark ? "text-black/60 hover:text-black" : "text-mist hover:text-ink",
+            )}
           >
             {t("contact")}
           </TransitionLink>
         </nav>
 
         <div className="ml-auto flex items-center gap-3">
-          <LocaleSwitcher />
-          <ThemeToggle />
+          <LocaleSwitcher dark={dark} />
+          <ThemeToggle dark={dark} />
         </div>
       </Container>
     </header>
